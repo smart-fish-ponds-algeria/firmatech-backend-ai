@@ -2,7 +2,7 @@ from ..modules.food_models import FoodRequest, FoodResponse
 
 class FoodController:
     def __init__(self, food_service):
-        self.food_service = food_service
+        self.food_service = Robo
     
     @staticmethod
     def predict_food(data: FoodRequest) -> FoodResponse:
