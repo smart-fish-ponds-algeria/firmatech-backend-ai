@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from modules.weight_models import WeightResponse
+from modules.weight_models import WeightResponse, WeightRequest
 from controllers.weight_controller import WeightController
 from fastapi import File, UploadFile, Form
 
