@@ -25,12 +25,3 @@ class RoboflowService:
 
     def get_predictions(self, result: Dict[str, Any]) -> List[Dict[str, Any]]:
         return result.get("predictions", [])
-
-# Example usage:
-# service = RoboflowService(api_url="https://serverless.roboflow.com", api_key="xvLawhjWhtU0ptPpzaw0")
-# result = service.infer_image("test.jpeg", model_id="talipia-fish-detection/2")
-# dims = service.get_image_dimensions(result)
-# print("Width:", dims["width"])
-# print("Height:", dims["height"])
-# for pred in service.get_predictions(result):
-#     print(f"Class: {pred['class']}, Confidence: {pred['confidence']}")
