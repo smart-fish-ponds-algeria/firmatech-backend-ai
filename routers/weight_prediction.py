@@ -1,13 +1,14 @@
 from fastapi import APIRouter
-
-
-from modules.weight_models import WeightRequest, WeightResponse
+from modules.weight_models import WeightResponse
+from controllers.weight_controller import WeightController
+from fastapi import File, UploadFile, Form
 
 router = APIRouter(prefix="/weight-prediction", tags=["Weight Prediction"])
 
+weight_controller = WeightController()
 
 @router.post("/predict", response_model=WeightResponse)
-async def predict_weight(data: WeightRequest):
-    # Weight (g) = 0.0196 × Length^2.9868
-    weight = 0.0196 * (data.length ** 2.9868)
-    return WeightResponse(weight=weight)
+async def predict_weight(
+    image: UploadFile = File(...),
+):
+    return await weight_controller.predict_weight_from_upload(image)
