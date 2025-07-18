@@ -16,8 +16,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Protect all routes
-# app.include_router(fish_counting.router, dependencies=[Depends(verify_token)])
+app.include_router(fish_counting.router)
 app.include_router(weight_prediction.router)
 # app.include_router(food_prediction.router, dependencies=[Depends(verify_token)])
 app.include_router(disease_detection.router)
