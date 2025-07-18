@@ -20,7 +20,7 @@ app.add_middleware(
 # app.include_router(fish_counting.router, dependencies=[Depends(verify_token)])
 app.include_router(weight_prediction.router)
 # app.include_router(food_prediction.router, dependencies=[Depends(verify_token)])
-# app.include_router(disease_detection.router, dependencies=[Depends(verify_token)])
+app.include_router(disease_detection.router)
 # app.include_router(summary_report.router, dependencies=[Depends(verify_token)])
 
 
