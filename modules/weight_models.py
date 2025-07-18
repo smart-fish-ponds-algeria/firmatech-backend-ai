@@ -1,7 +1,8 @@
 from pydantic import BaseModel
+from fastapi import UploadFile
 
 class WeightRequest(BaseModel):
-    length: float
+    img: UploadFile
 
 class WeightResponse(BaseModel):
     weight: float
