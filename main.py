@@ -16,23 +16,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Simple token-based auth
-security = HTTPBearer()
-
-def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    token = credentials.credentials
-    # Replace with your token validation logic
-    if token != "mysecrettoken":
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or missing token",
-        )
-    return True
-
-
 # Protect all routes
-app.include_router(fish_counting.router, dependencies=[Depends(verify_token)])
-app.include_router(weight_prediction.router, dependencies=[Depends(verify_token)])
-app.include_router(food_prediction.router, dependencies=[Depends(verify_token)])
-app.include_router(disease_detection.router, dependencies=[Depends(verify_token)])
-app.include_router(summary_report.router, dependencies=[Depends(verify_token)])
+# app.include_router(fish_counting.router, dependencies=[Depends(verify_token)])
+app.include_router(weight_prediction.router)
+# app.include_router(food_prediction.router, dependencies=[Depends(verify_token)])
+# app.include_router(disease_detection.router, dependencies=[Depends(verify_token)])
+# app.include_router(summary_report.router, dependencies=[Depends(verify_token)])
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8000)
