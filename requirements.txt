@@ -4,3 +4,5 @@ pydantic
 python-multipart
 roboflow
 opencv-python
+agno
+google-genai
