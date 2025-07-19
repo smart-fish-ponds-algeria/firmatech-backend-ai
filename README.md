@@ -54,8 +54,8 @@ FastAPI
 * **Output**: Bounding boxes of detected fish
 * **Post-processing**: `CentroidTracker` avoids double counting
 
-[fish_detection_model_metrics](images/fish_detection_model_metrics.png)
-[fish_detection_model_graph](images/fish_detection_model_graph.png)
+![fish_detection_model_metrics](images/fish_detection_model_metrics.png)
+![fish_detection_model_graph](images/fish_detection_model_graph.png)
 
 ### 🧬 2. Disease Classification
 
@@ -73,8 +73,8 @@ FastAPI
   "sicknessType": "Streptococcus"
 }
 ```
-[fish_disease_model_metrics](images/fish_disease_model_metrics.png)
-[fish_disease_model_graph](images/fish_disease_model_graph.png)
+![fish_disease_model_metrics](images/fish_disease_model_metrics.png)
+![fish_disease_model_graph](images/fish_disease_model_graph.png)
 
 
 ### ⚖️ 3. Weight Prediction
@@ -87,8 +87,8 @@ FastAPI
 * **Calibration**: Static for testing (pixel → cm)
 * **Assumption**: Sampled fish weight is applied to whole tank
 
-[fish_detection_model_metrics](images/fish_detection_model_metrics.png)
-[fish_detection_model_graph](images/fish_detection_model_graph.png)
+![fish_detection_model_metrics](images/fish_detection_model_metrics.png)
+![fish_detection_model_graph](images/fish_detection_model_graph.png)
 
 ---
 
@@ -107,16 +107,16 @@ FastAPI
 ## 🧠 Diagram Snapshots
 
 ### Fish Counting
-[fish_counting_workflow](diagram/fish_counting_workflow.png)
+![fish_counting_workflow](diagram/fish_counting_workflow.png)
 
 ### Weight Prediction
-[fish_weight_estimation_workflow](diagram/fish_weight_estimation_workflow.png)
+![fish_weight_estimation_workflow](diagram/fish_weight_estimation_workflow.png)
 
 ### Disease Detection
-[fish_disease_workflow](diagram/fish_disease_workflow.png)
+![fish_disease_workflow](diagram/fish_disease_workflow.png)
 
 ### Daily report generation
-[agent_workflow](diagram/agent_workflow.png)
+![agent_workflow](diagram/agent_workflow.png)
 
 ---
 
